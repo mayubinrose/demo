@@ -91,7 +91,7 @@ var indexManger = {
             //             }
             //         });
             //     });
-                $.getJSON("/use/logout",function (resp) {
+                $.getJSON("/user/logout",function (resp) {
                     if (resp.code == 200) {
                         window.location.href = resp.data;
                     } else {

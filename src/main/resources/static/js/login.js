@@ -37,7 +37,7 @@ var loginManager = {
 
 
 
-        $.post("/use/login",{"username":username,"password":password},function (data,status,xhr) {
+        $.post("/user/login",{"username":username,"password":password},function (data,status,xhr) {
             if (data.code == 200) {
                 window.location.href= data.data;
             } else if (data.code == 400) {

@@ -7,7 +7,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("thymeleaf")
-public class testController {
+public class RouteController {
     @RequestMapping("hello")
     public String hello(Map<String,Object> map) {
         map.put("msg", "mmmdfdf Hddddddello Thymeleaf mdw ");

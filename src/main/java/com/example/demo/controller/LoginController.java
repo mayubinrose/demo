@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @RestController
-@RequestMapping("/use")
+@RequestMapping("/user")
 public class LoginController {
     @Autowired
     private UserService userservice;
