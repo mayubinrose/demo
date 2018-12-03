@@ -1,4 +1,11 @@
 package com.example.demo.service;
 
-public class UserService {
+import com.example.demo.model.User;
+
+
+public interface UserService {
+    User findByusername(String username);
+
+    void updatePwd(String username,String oldpwd,String newpwd);
+
 }

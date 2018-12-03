@@ -55,6 +55,24 @@
                 </exclusion>
             </exclusions>-->
 		</dependency>
+		<!-- JSON 工具 -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20180130</version>
+		</dependency>
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 		<!-- 页面模板 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

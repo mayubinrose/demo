@@ -67,10 +67,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li>
-                <a href="#" class="tab" target="_blank">用户名</a>
+                <!--<a href="#" class="tab" target="_blank"><span th:text="${session.user.username"></span></a>-->
+                <a class="tab" target="_blank" th:if="${#session.getAttribute('user') != null}"> [[${#session.getAttribute('user').username}]]</a>
               </li>
               <li>
-                <a href="#" class="tab" target="_blank">退出</a>
+                <a id="logoutBtn" class="tab" target="_blank">退出</a>
               </li>
   
             </ul>
@@ -162,6 +163,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script th:src="@{/js/bootstrap.js}"></script>
 <!-- AdminLTE App -->
 <script th:src="@{/js/adminlte.js}"></script>
+<script th:src="@{/js/common.js}"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

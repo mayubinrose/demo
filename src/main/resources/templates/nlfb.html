@@ -67,7 +67,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#" class="tab" target="_blank">用户名</a>
+                            <a href="#" class="tab" target="_blank" th:if="${#session.getAttribute('user') != null}"> [[${#session.getAttribute('user').username}]]</a>
+
                         </li>
                         <li>
                             <a href="#" class="tab" target="_blank">退出</a>

@@ -10,7 +10,7 @@ import java.util.Map;
 public class testController {
     @RequestMapping("hello")
     public String hello(Map<String,Object> map) {
-        map.put("msg", "mmmdfdf Hello Thymeleaf mdw ");
+        map.put("msg", "mmmdfdf Hddddddello Thymeleaf mdw ");
         return "hello";
     }
     @RequestMapping("test1")
@@ -37,5 +37,10 @@ public class testController {
     public String xbfb(Map<String,Object> map) {
 //        map.put("msg", "Hello Thymeleaf mdw ");
         return "xbfb";
+    }
+    @RequestMapping("login")
+    public String login(Map<String,Object> map) {
+//        map.put("msg", "Hello Thymeleaf mdw ");
+        return "login";
     }
 }
