@@ -1,8 +1,12 @@
 package com.example.demo;
 
 import com.example.demo.common.ParamObject;
+import com.example.demo.mapper.AgeAnalysisMapper;
 import com.example.demo.mapper.SexAnalysisMapper;
+import com.example.demo.model.AgeAnalysis;
+import com.example.demo.model.AgeAndSex;
 import com.example.demo.model.SexAnalysis;
+import com.example.demo.service.AgeAnalysisService;
 import com.example.demo.service.SexAnalysisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +22,8 @@ import java.util.List;
 public class DemoApplicationTests {
 
 	@Autowired
-	private  SexAnalysisMapper SexAnalysis;
+	private AgeAnalysisService ageser;
+	private AgeAnalysisMapper agemapper;
 
 	@Test
 	public void contextLoads() {
@@ -29,11 +34,24 @@ public class DemoApplicationTests {
 
 
 
-		List<SexAnalysis> list = SexAnalysis.showSexAnalysisById(param);
-		for (SexAnalysis sex : list){
-			System.out.print(sex);
+		List<AgeAnalysis> list = ageser.showAgeAnalysisById(param);
+		for (AgeAnalysis age : list){
+			System.out.print(age);
 		}
 
 	}
 
+	@Test
+	public void testAgeMapper(){
+		ParamObject param = new ParamObject();
+		param.setUserId(1);
+		param.setEndDate("2018-09-23");
+		param.setStartDate("2018-10-23");
+
+		List<AgeAndSex> l = new ArrayList<>();
+		l = agemapper.showAgeAnalysisById(param);
+		for(AgeAndSex as : l){
+			System.out.print(as);
+		}
+	}
 }
