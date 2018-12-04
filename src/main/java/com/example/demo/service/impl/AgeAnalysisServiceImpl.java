@@ -29,10 +29,10 @@ public class AgeAnalysisServiceImpl implements AgeAnalysisService {
         AgeAnalysis age58_68 = new AgeAnalysis();
         List<AgeAndSex> ageandsexs = agemapper.showAgeAnalysisById(param);
         age18_28.setDisc("18-28");
-        age18_28.setDisc("28-38");
-        age18_28.setDisc("38-48");
-        age18_28.setDisc("48-58");
-        age18_28.setDisc("58-68");
+        age28_38.setDisc("28-38");
+        age38_48.setDisc("38-48");
+        age48_58.setDisc("48-58");
+        age58_68.setDisc("58-68");
         for(AgeAndSex ageandsex: ageandsexs){
             if(18<=ageandsex.getAge() && ageandsex.getAge()<28){
                 age18_28.setNum();          //+1

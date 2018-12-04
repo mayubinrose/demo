@@ -23,13 +23,15 @@ public class DemoApplicationTests {
 
 	@Autowired
 	private AgeAnalysisService ageser;
+
+	@Autowired
 	private AgeAnalysisMapper agemapper;
 
 	@Test
 	public void contextLoads() {
 		ParamObject param = new ParamObject();
 		param.setUserId(1);
-		param.setEndDate("2018-10-23");
+		param.setEndDate("2018-9-12");
 		param.setStartDate("2018-10-23");
 
 
@@ -45,7 +47,7 @@ public class DemoApplicationTests {
 	public void testAgeMapper(){
 		ParamObject param = new ParamObject();
 		param.setUserId(1);
-		param.setEndDate("2018-09-23");
+		param.setEndDate("2018-09-12");
 		param.setStartDate("2018-10-23");
 
 		List<AgeAndSex> l = new ArrayList<>();
