@@ -2,11 +2,24 @@ package com.example.demo.common;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.context.annotation.Bean;
 
 @Setter
 @Getter
 public class ParamObject {
     private int userId;
+
+    @Override
+    public String toString() {
+        return "ParamObject{" +
+                "userId=" + userId +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                '}';
+    }
+
+    private String startDate;
+    private String endDate;
 
     public int getUserId() {
         return userId;
@@ -32,6 +45,4 @@ public class ParamObject {
         this.endDate = endDate;
     }
 
-    private String startDate;
-    private String endDate;
 }

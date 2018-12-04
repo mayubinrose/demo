@@ -18,11 +18,7 @@ public class SexAnalysisServiceImpl implements SexAnalysisService {
     @Override
     public List<SexAnalysis> showSexAnalysisById(ParamObject params) {
 
+        SexAnalysis.showSexAnalysisById(params);
         return SexAnalysis.showSexAnalysisById(params);
-    }
-
-    @Override
-    public List<SexAnalysis> showSexAnalysisList(ParamObject params) {
-        return null;
     }
 }

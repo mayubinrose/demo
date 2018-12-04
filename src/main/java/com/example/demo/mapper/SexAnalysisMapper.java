@@ -9,7 +9,6 @@ import java.util.List;
 public interface SexAnalysisMapper {
 
     List<SexAnalysis> showSexAnalysisById(ParamObject params);
-
 //    public List<SexAnalysis> showSexAnalysisList(ParamObject params);
 
 }

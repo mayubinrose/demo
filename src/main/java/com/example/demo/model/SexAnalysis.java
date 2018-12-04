@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Setter
 @ToString
 public class SexAnalysis {
-    private int userId;
+
 
     public int getUserId() {
         return userId;
@@ -36,7 +36,8 @@ public class SexAnalysis {
     public void setSexNum(int sexNum) {
         this.sexNum = sexNum;
     }
-
+    
+    private int userId;
     private int sexType;
     private int sexNum;
 }

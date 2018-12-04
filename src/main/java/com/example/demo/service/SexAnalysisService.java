@@ -8,6 +8,6 @@ import java.util.List;
 public interface SexAnalysisService {
     List<SexAnalysis> showSexAnalysisById(ParamObject params);
 
-    List<SexAnalysis> showSexAnalysisList(ParamObject params);
+//    List<SexAnalysis> showSexAnalysisList(ParamObject params);
 
 }

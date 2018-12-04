@@ -16,7 +16,7 @@ public class LoginController {
     private UserService userservice;
 
     @PostMapping("/login")
-    public Result login(User user,HttpServletRequest request){
+    public Result login(@RequestBody User user,HttpServletRequest request){
         System.out.print(user);
         User usernew = userservice.findByusername(user.getUsername());
         if(usernew==null){

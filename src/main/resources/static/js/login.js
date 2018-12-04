@@ -36,16 +36,33 @@ var loginManager = {
         }
 
 
+        $.ajax({
+            type: "post",
+            url: "/user/login",
+            data: JSON.stringify({"username": username, "password": password}),
+            dataType: "json",
+            contentType: "application/json;charset=UTF-8",
+            success: function (data, status, xhr) {
+                if (data.code == 200) {
+                    window.location.href = data.data;
+                } else if (data.code == 400) {
+                    swal("登录失败", resp.msg, "error");
+                } else {
+                    $("#changeBtn").attr("src", "/admin/captcha.do");
+                    swal("登录失败", resp.msg, "error");
+                }
+            },
+        })
 
-        $.post("/user/login",{"username":username,"password":password},function (data,status,xhr) {
-            if (data.code == 200) {
-                window.location.href= data.data;
-            } else if (data.code == 400) {
-                swal("登录失败", resp.msg,"error");
-            }else {
-                $("#changeBtn").attr("src","/admin/captcha.do");
-                swal("登录失败", resp.msg,"error");
-            }
-        },"json");
+        // $.post("/user/login",{"username":username,"password":password},function (data,status,xhr) {
+        //     if (data.code == 200) {
+        //         window.location.href= data.data;
+        //     } else if (data.code == 400) {
+        //         swal("登录失败", resp.msg,"error");
+        //     }else {
+        //         $("#changeBtn").attr("src","/admin/captcha.do");
+        //         swal("登录失败", resp.msg,"error");
+        //     }
+        // },"json");
     }
 }

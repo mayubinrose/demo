@@ -3,6 +3,7 @@ package com.example.demo;
 import com.example.demo.common.ParamObject;
 import com.example.demo.mapper.SexAnalysisMapper;
 import com.example.demo.model.SexAnalysis;
+import com.example.demo.service.SexAnalysisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,16 +18,18 @@ import java.util.List;
 public class DemoApplicationTests {
 
 	@Autowired
-	private SexAnalysisMapper sex;
+	private  SexAnalysisMapper SexAnalysis;
 
 	@Test
 	public void contextLoads() {
 		ParamObject param = new ParamObject();
 		param.setUserId(1);
-		param.setEndDate("2018-09-12");
+		param.setEndDate("2018-10-23");
 		param.setStartDate("2018-10-23");
-		List<SexAnalysis> list = new ArrayList<>();
-		list = sex.showSexAnalysisById(param);
+
+
+
+		List<SexAnalysis> list = SexAnalysis.showSexAnalysisById(param);
 		for (SexAnalysis sex : list){
 			System.out.print(sex);
 		}
