@@ -1,20 +1,13 @@
 package com.example.demo.model;
 
+import lombok.ToString;
+
 import java.util.List;
 
+@ToString
 public class AgeAnalysis {
     private String disc;  //年龄范围
     private int Num=0;     //人数
-
-    @Override
-    public String toString() {
-        return "AgeAnalysis{" +
-                "disc='" + disc + '\'' +
-                ", Num=" + Num +
-                ", man=" + man +
-                ", woman=" + woman +
-                '}';
-    }
 
     private int man=0;
     private int woman=0;

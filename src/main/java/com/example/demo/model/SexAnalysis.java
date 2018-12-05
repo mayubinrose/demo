@@ -11,31 +11,6 @@ import javax.persistence.Table;
 @Setter
 @ToString
 public class SexAnalysis {
-
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public int getSexType() {
-        return sexType;
-    }
-
-    public void setSexType(int sextype) {
-        this.sexType = sextype;
-    }
-
-    public int getSexNum() {
-        return sexNum;
-    }
-
-    public void setSexNum(int sexNum) {
-        this.sexNum = sexNum;
-    }
     
     private int userId;
     private int sexType;

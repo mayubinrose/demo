@@ -2,11 +2,14 @@ package com.example.demo;
 
 import com.example.demo.common.ParamObject;
 import com.example.demo.mapper.AgeAnalysisMapper;
+import com.example.demo.mapper.PassengerFlowAnalysisMapper;
 import com.example.demo.mapper.SexAnalysisMapper;
 import com.example.demo.model.AgeAnalysis;
 import com.example.demo.model.AgeAndSex;
+import com.example.demo.model.PassengerFlow;
 import com.example.demo.model.SexAnalysis;
 import com.example.demo.service.AgeAnalysisService;
+import com.example.demo.service.PassengerFlowAnalysisService;
 import com.example.demo.service.SexAnalysisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,6 +29,10 @@ public class DemoApplicationTests {
 
 	@Autowired
 	private AgeAnalysisMapper agemapper;
+	@Autowired
+	private PassengerFlowAnalysisMapper pass;
+	@Autowired
+	private PassengerFlowAnalysisService passservice;
 
 	@Test
 	public void contextLoads() {
@@ -55,5 +62,19 @@ public class DemoApplicationTests {
 		for(AgeAndSex as : l){
 			System.out.print(as);
 		}
+
+	}
+	@Test
+	public void testPassFlowMapper(){
+		ParamObject param = new ParamObject();
+		param.setUserId(1);
+		param.setEndDate("2018-09-12");
+		param.setStartDate("2018-10-23");
+
+		List<PassengerFlow> l =  passservice.showPassFlowAnalysisById(param);
+		for(PassengerFlow as : l){
+			System.out.print(as);
+		}
+
 	}
 }

@@ -4,12 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@Setter
 @Getter
+@Setter
 @ToString
-public class AgeAndSex {
-
-    private int age;
-    private int sex;
+public class PassengerFlow {
+    private String date;
+    private int passengerFolw;
 
 }
