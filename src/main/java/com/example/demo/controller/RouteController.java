@@ -16,7 +16,7 @@ public class RouteController {
     @RequestMapping("test1")
     public String index(Map<String,Object> map) {
 //        map.put("msg", "Hello Thymeleaf mdw ");
-        return "";
+        return "starter";
     }
     @RequestMapping("starter")
     public String start(Map<String,Object> map) {
